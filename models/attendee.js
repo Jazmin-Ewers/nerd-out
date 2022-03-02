@@ -2,6 +2,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const attendeeSchema = new Schema({
+  id: Number,
   name: String,
   phone: String,
   address: String,
@@ -10,8 +11,9 @@ const attendeeSchema = new Schema({
   country: String,
   postalZip: String,
   email: String,
-  company: String,
+  Company: String,
   companyFunded: String,
+  userID: String,
   team: Number,
   paid: Boolean,
   date: String,

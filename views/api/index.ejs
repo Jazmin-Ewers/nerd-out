@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>Api</title>
+</head>
+<body>
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">id</th>
+            <th scope="col">name</th>
+            <th scope="col">phone</th>
+            <th scope="col">address</th>
+            <th scope="col">city</th>
+            <th scope="col">state</th>
+            <th scope="col">country</th>
+            <th scope="col">postalZip</th>
+            <th scope="col">email</th>
+            <th scope="col">company</th>
+            <th scope="col">companyFunded</th>
+            <th scope="col">team</th>
+            <th scope="col">paid</th>
+            <th scope="col">date</th>
+            <th scope="col">title</th>
+          </tr>
+        </thead>
+        <tbody>
+            <% attendees.forEach(function(attendee) { %>
+                <tr>
+                    <th scope="row"><%= attendee.id %></th>
+                    <td><%= attendee.name %></td>
+                    <td><%= attendee.phone %></td>
+                    <td><%= attendee.address %></td>
+                    <td><%= attendee.city %></td>
+                    <td><%= attendee.state %></td>
+                    <td><%= attendee.country %></td>
+                    <td><%= attendee.postalZip %></td>
+                    <td><%= attendee.email %></td>
+                    <td><%= attendee.Company %></td>
+                    <td><%= attendee.companyFunded %></td>
+                    <td><%= attendee.team %></td>
+                    <td><%= attendee.paid %></td>
+                    <td><%= attendee.date %></td>
+                    <td><%= attendee.title %></td>
+                </tr>
+                <% }); %>
+        </tbody>
+      </table>
+    
+</body>
+</html>
