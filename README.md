@@ -2,7 +2,7 @@
 
 
 ## Assignment
-As part of General Assembly's Backend 2-day Hackathon, I was tasked to build a funtional **FULL CRUD** **API** using data from the JSON file.
+As part of General Assembly's Backend 2-day Hackathon, I was tasked to build a functional **FULL CRUD** **API** using data from the JSON file.
 
 The JSON file contains 1,000 attendees in this format
 ## Attendee sample
