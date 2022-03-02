@@ -11,6 +11,6 @@ async function index(req, res) {
 }
 
 async function showTeam(req, res) {
-    const team_members = await Attendee.find({team: 1 });
+    const team_members = await Attendee.find({team: req.params.id });
     res.render('api/team', { team_members });
 }
