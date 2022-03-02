@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>Api</title>
+</head>
+<body>
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">id</th>
+            <th scope="col">name</th>
+            <th scope="col">phone</th>
+            <th scope="col">address</th>
+            <th scope="col">city</th>
+            <th scope="col">state</th>
+            <th scope="col">country</th>
+            <th scope="col">postalZip</th>
+            <th scope="col">email</th>
+            <th scope="col">company</th>
+            <th scope="col">companyFunded</th>
+            <th scope="col">team</th>
+            <th scope="col">paid</th>
+            <th scope="col">date</th>
+            <th scope="col">title</th>
+          </tr>
+        </thead>
+        <tbody>
+            <% team_members.forEach(function(team_member) { %>
+                <tr>
+                    <th scope="row"><%= team_member.id %></th>
+                    <td><%= team_member.name %></td>
+                    <td><%= team_member.phone %></td>
+                    <td><%= team_member.address %></td>
+                    <td><%= team_member.city %></td>
+                    <td><%= team_member.state %></td>
+                    <td><%= team_member.country %></td>
+                    <td><%= team_member.postalZip %></td>
+                    <td><%= team_member.email %></td>
+                    <td><%= team_member.Company %></td>
+                    <td><%= team_member.companyFunded %></td>
+                    <td><%= team_member.team %></td>
+                    <td><%= team_member.paid %></td>
+                    <td><%= team_member.date %></td>
+                    <td><%= team_member.title %></td>
+                </tr>
+                <% }); %>
+        </tbody>
+      </table>
+    
+</body>
+</html>
