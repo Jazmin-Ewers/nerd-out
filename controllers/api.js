@@ -2,15 +2,21 @@ const Attendee = require('../models/attendee');
 
 module.exports = {
     index,
-    showTeam
+    showTeam,
+    showCompany
 };
 
 async function index(req, res) {
     const attendees = await Attendee.find({});
-    res.render('api/index', { attendees });
+    res.render('api/index', { title: "Attendees", attendees });
 }
 
 async function showTeam(req, res) {
     const team_members = await Attendee.find({team: req.params.id });
-    res.render('api/team', { team_members });
+    res.render('api/team', { title: "Team", team_members });
+}
+
+async function showCompany(req, res) {
+    const employees = await Attendee.find({Company: req.params.name });
+    res.render('api/company', { title: "Company", employees });
 }

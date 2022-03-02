@@ -8,5 +8,8 @@ router.get('/', apiCtrl.index);
 // Get '/api/team/:id show all attendees on a certain team
 router.get('/team/:id', apiCtrl.showTeam);
 
+// Get '/api/company/:name show all attendees on a certain company
+router.get('/company/:name', apiCtrl.showCompany);
+
 
 module.exports = router;

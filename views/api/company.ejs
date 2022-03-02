@@ -29,23 +29,23 @@
           </tr>
         </thead>
         <tbody>
-            <% attendees.forEach(function(attendee) { %>
+            <% employees.forEach(function(employee) { %>
                 <tr>
-                    <th scope="row"><%= attendee.id %></th>
-                    <td><%= attendee.name %></td>
-                    <td><%= attendee.phone %></td>
-                    <td><%= attendee.address %></td>
-                    <td><%= attendee.city %></td>
-                    <td><%= attendee.state %></td>
-                    <td><%= attendee.country %></td>
-                    <td><%= attendee.postalZip %></td>
-                    <td><%= attendee.email %></td>
-                    <td><%= attendee.Company %></td>
-                    <td><%= attendee.companyFunded %></td>
-                    <td><%= attendee.team %></td>
-                    <td><%= attendee.paid %></td>
-                    <td><%= attendee.date %></td>
-                    <td><%= attendee.title %></td>
+                    <th scope="row"><%= employee.id %></th>
+                    <td><%= employee.name %></td>
+                    <td><%= employee.phone %></td>
+                    <td><%= employee.address %></td>
+                    <td><%= employee.city %></td>
+                    <td><%= employee.state %></td>
+                    <td><%= employee.country %></td>
+                    <td><%= employee.postalZip %></td>
+                    <td><%= employee.email %></td>
+                    <td><%= employee.Company %></td>
+                    <td><%= employee.companyFunded %></td>
+                    <td><%= employee.team %></td>
+                    <td><%= employee.paid %></td>
+                    <td><%= employee.date %></td>
+                    <td><%= employee.title %></td>
                 </tr>
                 <% }); %>
         </tbody>
