@@ -3,7 +3,8 @@ const Attendee = require('../models/attendee');
 module.exports = {
     index,
     showTeam,
-    showCompany
+    showCompany,
+    showTitle
 };
 
 async function index(req, res) {
@@ -19,4 +20,9 @@ async function showTeam(req, res) {
 async function showCompany(req, res) {
     const employees = await Attendee.find({Company: req.params.name });
     res.render('api/company', { title: "Company", employees });
+}
+
+async function showTitle(req, res) {
+    const attendees = await Attendee.find({ title: req.params.title });
+    res.render('api/title', { title: "Job Title", attendees });
 }
