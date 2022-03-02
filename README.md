@@ -28,19 +28,19 @@ The JSON file contains 1,000 attendees in this format
 }
 ```
 
-## Features:
+# API Features:
 
-# Get
+## Get
 - Shows all 1,000 attendees
 - Shows all attendees based on their team number
 - Shows all attendees based on their companies
 - Show all attendees based on their job title
 
-# Update
+## Update
 - Find attendee id #**793** and change their company from `Google` to `NASA`
 - Find attendee id #**98** Mojo Jojo and delete them from the **API**
 
-# Create
+## Create
 - Create a new attendee
 
 ###  Bonus:
