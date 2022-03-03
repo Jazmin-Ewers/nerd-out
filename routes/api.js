@@ -6,7 +6,7 @@ const apiCtrl = require('../controllers/api');
 router.get('/', apiCtrl.index);
 
 // POST '/api' create new attendee
-
+router.post('/api', apiCtrl.create);
 
 // GET '/api/show get an attendee info
 router.get('/show', apiCtrl.show);
