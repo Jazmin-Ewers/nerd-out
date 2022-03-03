@@ -42,14 +42,9 @@ async function update(req, res) {
     res.render('api/show', { title: "Attendee", attendee });
 }
 
-function deleteAttendee(req, res, next) {
-    Attendee.findOne({_id: req.params.id }).then(function (attendee) {
-        attendee.remove();
-            then(function () {
-                res.redirect('/api');
-            })
-            .cacth(function (err) {
-                return next(err);
-            });
+function deleteAttendee(req, res) {
+    Attendee.findOneAndDelete({_id: req.params._id }, function (err) {
+        if(err) console.log(err);
+        res.redirect('/api');
         });
     }
