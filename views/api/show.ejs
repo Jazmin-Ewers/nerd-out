@@ -20,7 +20,7 @@
         <div class="card-body">
           <h4 class="card-title">Update Company</h5>
           <p class="card-text">Current Company: <%= attendee[0].Company %></p>
-          <form>
+          <form action="/api/show/<%= attendee[0].id %>" method="POST">
           <div class="form-inline">
             <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref" name="Company">
               <option selected>Choose Company...</option>

@@ -5,11 +5,11 @@ const apiCtrl = require('../controllers/api');
 // GET '/api' all the attendees
 router.get('/', apiCtrl.index);
 
-// GET '/api/search' get an attendee info
-router.post('/search', apiCtrl.search);
+// GET '/api/show get an attendee info
+router.get('/show', apiCtrl.show);
 
 // PUT '/api/:id' update an attendees info
-router.post('/:id', apiCtrl.update);
+router.post('/show/:id', apiCtrl.update);
 
 // Get '/api/team/:id show all attendees on a certain team
 router.get('/team/:id', apiCtrl.showTeam);

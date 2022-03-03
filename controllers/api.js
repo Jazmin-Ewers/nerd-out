@@ -5,7 +5,7 @@ module.exports = {
     showTeam,
     showCompany,
     showTitle,
-    search,
+    show,
     update
 };
 
@@ -29,20 +29,15 @@ async function showTitle(req, res) {
     res.render('api/title', { title: "Job Title", attendees });
 }
 
-async function search(req, res) {
-    const attendee = await Attendee.find({id: 1 });
-    console.log(attendee);
+async function show(req, res) {
+    const attendee = await Attendee.find({id: req.query.id});
     res.render('api/show', { title: "Attendee", attendee });
 }
 
-// function show(req, res) {
-//     const attendee  = Attendee.findById(req.params.id);
-//     console.log(attendee.name);
-//     res.render('api/show', { title: "Attendee", attendee });
-// }
-
-function update(req, res) {
-    Attendee.findOne(req.params.id, function (err, attendee) {
-        console.log(req.body);
-    });
+async function update(req, res) {
+    const attendee = await Attendee.find({id: req.params.id });
+    attendee[0].Company = req.body.Company;
+    attendee[0].save();
+    res.render('api/show', { title: "Attendee", attendee });
 }
+
