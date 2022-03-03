@@ -7,7 +7,8 @@ module.exports = {
     showTitle,
     show,
     update,
-    delete: deleteAttendee
+    delete: deleteAttendee,
+    new: newAttendeeForm
 };
 
 async function index(req, res) {
@@ -48,3 +49,7 @@ function deleteAttendee(req, res) {
         res.redirect('/api');
         });
     }
+    
+async function newAttendeeForm(req, res) {
+    res.render('api/new', { title: "New Attendee"});
+}
