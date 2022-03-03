@@ -6,7 +6,8 @@ module.exports = {
     showCompany,
     showTitle,
     show,
-    update
+    update,
+    delete: deleteAttendee
 };
 
 async function index(req, res) {
@@ -41,3 +42,14 @@ async function update(req, res) {
     res.render('api/show', { title: "Attendee", attendee });
 }
 
+function deleteAttendee(req, res, next) {
+    Attendee.findOne({_id: req.params.id }).then(function (attendee) {
+        attendee.remove();
+            then(function () {
+                res.redirect('/api');
+            })
+            .cacth(function (err) {
+                return next(err);
+            });
+        });
+    }
