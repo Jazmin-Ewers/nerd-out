@@ -39,7 +39,7 @@ https://nerd-out-3-day-hackathon-2022.herokuapp.com/api
 | Shows all 1,000 attendees      | /api/       |
 | Shows all attendees based on their team number  | /api/team/<Team Number #> |
 | Shows all attendees based on their companies  |  /api/company/<Company Name > |
-| Shows all attendees based on their job title |  /api/company/<Job Title > |
+| Shows all attendees based on their job title |  /api/title/<Job Title > |
 	
 
 ## Update
