@@ -51,10 +51,7 @@ https://nerd-out-3-day-hackathon-2022.herokuapp.com/api
 ## Create
 - Create a new attendee
 
-###  Bonus:
-
- - 
- - Add a README that goes through what your API does
+###  Additional Bonus Features:
  - Convert the phone field format from `xxx-xxxxxxx` to `(xxx) xxx-xxxx`.
  - Take the date format from month/year and separate it to have it's own fields (month and year)
  - Be able to search by any part of the name and return the results 
