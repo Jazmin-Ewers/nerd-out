@@ -31,17 +31,29 @@ async function showCompany(req, res) {
 
 async function showTitle(req, res) {
     const attendees = await Attendee.find({ title: req.params.title });
-    res.render('api/title', { title: "Job Title", attendees });
+    res.render('api/title', { title: 'Job Title', attendees });
+}
+
+// Be able to search by any part of the name and return the results
+async function findAttendeePartialName(partial) {
+    const attendees = await Attendee.find({name: {$regex: partial, $options: 'i'}});
+    console.log(attendees);
+}
+
+function checkIfNumber(str) {
+    let result = parseInt(str);
+    return (Number.isInteger(result)); 
 }
 
 async function show(req, res) {
-    const attendee = await Attendee.find({id: req.query.id});
+    let attendee = checkIfNumber(req.query.search) ? 
+     // Search by Attendee Id                     // Search by Attendee' partial name
+    await Attendee.find({id: req.query.search}) : await Attendee.find({name: {$regex: req.query.search, $options: 'i'}});
+    console.log(attendee);
     if (attendee.length === 0) {
-        console.log("Not found page")
         res.redirect('/api/notFound')
     } else {
-        console.log("Have attendee")
-        res.render('api/show', { title: "Attendee", attendee });
+        res.render('api/show', { title: 'Attendee', attendee });
     }
 }
 
