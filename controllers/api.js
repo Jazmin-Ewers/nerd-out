@@ -69,16 +69,20 @@ function randomIntFromInterval(min, max) {
   }
 
 function createAttendee(req, res) {
-    const attendee = new Attendee(req.body);
     // randomIntFromInterval(1, 1000);
     req.body.id = 1;
-    req.bpdy.paid = (!req.body.paid) ? false : true;
+    req.body.paid = (!req.body.paid) ? false : true;
+    console.log(typeof req.body.paid)
     req.body.userID = randomIntFromInterval(100000000000000000, 900000000000000000);
     req.body.companyFunded = parseInt(req.body.companyFunded);
     req.body.team = parseInt(req.body.team);
     console.log(req.body);
+    const attendee = new Attendee(req.body);
+    console.log(attendee)
     attendee.save(function(err) {
-        if (err) console.log(err)
+        if (err) {
+            console.log(err);
+        }
         res.redirect('/api');
     })
 }
