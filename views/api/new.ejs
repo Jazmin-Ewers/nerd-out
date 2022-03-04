@@ -1,5 +1,5 @@
 <%- include('../partials/header') %>
-<form action="/" method="POST" >
+<form action="/api" method="POST">
     <div class="form-row">
 
       <div class="form-group col-md-6">
@@ -9,7 +9,7 @@
 
       <div class="form-group col-md-6">
         <label for="inputEmail4">Phone</label>
-        <input type="tel" name="phone" class="form-control" id="inputEmail4" placeholder="123-123456" pattern="[+]{1}[0-9]{11,14}" required>
+        <input type="tel" name="phone" class="form-control" id="inputEmail4" placeholder="123-123456">
       </div>
 
     </div>
@@ -74,7 +74,7 @@
     
     <div class="form-group">
       <div class="form-check">
-        <input class="form-check-input" type="checkbox" id="gridCheck">
+        <input class="form-check-input" name="paid" type="checkbox" id="gridCheck">
         <label class="form-check-label" for="gridCheck">
           Did you paid for the event?
         </label>

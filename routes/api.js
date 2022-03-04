@@ -29,6 +29,9 @@ router.get('/company/:name', apiCtrl.showCompany);
 // GET '/api/title/:title show all attendees with a certain job title
 router.get('/title/:title', apiCtrl.showTitle);
 
+// GET '/api/notFound' if you search for an attendee that was not in database go to not Found page
+router.get('/notFound', apiCtrl.notFound);
+
 
 
 
