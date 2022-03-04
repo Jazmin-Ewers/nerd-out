@@ -15,7 +15,7 @@ module.exports = {
 };
 
 async function index(req, res) {
-    const attendees = await Attendee.find({});
+    const attendees = await Attendee.find({}).sort({id: 1});
     res.render('api/index', { title: "Attendees", attendees });
 }
 
@@ -69,8 +69,7 @@ function randomIntFromInterval(min, max) {
   }
 
 function createAttendee(req, res) {
-    // randomIntFromInterval(1, 1000);
-    req.body.id = 1;
+    req.body.id = parseInt(req.body.id);
     req.body.paid = (!req.body.paid) ? false : true;
     console.log(typeof req.body.paid)
     req.body.userID = randomIntFromInterval(100000000000000000, 900000000000000000);
