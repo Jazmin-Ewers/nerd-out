@@ -33,7 +33,8 @@ https://nerd-out-3-day-hackathon-2022.herokuapp.com/api
 
 # API Features:
 
-| Read      | url |
+## Read
+|   Feature    | url |
 | ----------- | ----------- |
 | Shows all 1,000 attendees      | /api/       |
 | Shows all attendees based on their team number  | /api/team/<Team Number #> |
