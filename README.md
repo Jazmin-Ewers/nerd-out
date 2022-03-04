@@ -31,10 +31,18 @@ The JSON file contains 1,000 attendees in this format
 # API Features:
 
 ## Get
-- Shows all 1,000 attendees
+- Shows all 1,000 attendees 
 - Shows all attendees based on their team number
 - Shows all attendees based on their companies
 - Show all attendees based on their job title
+
+| Read      | url |
+| ----------- | ----------- |
+| Shows all 1,000 attendees      | /api/       |
+| Shows all attendees based on their team number  | /api/team/<Team Number #> |
+| Shows all attendees based on their companies  |  /api/company/<Company Name > |
+| Shows all attendees based on their job title |  /api/company/<Job Title > |
+	
 
 ## Update
 - Find attendee id #**793** and change their company from `Google` to `NASA`
