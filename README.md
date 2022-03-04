@@ -55,3 +55,7 @@ https://nerd-out-3-day-hackathon-2022.herokuapp.com/api
  - Convert the phone field format from `xxx-xxxxxxx` to `(xxx) xxx-xxxx`.
  - Take the date format from month/year and separate it to have it's own fields (month and year)
  - Be able to search by any part of the name and return the results 
+	
+### Ice Boxed
+- Improve runtime of the index page (Instead of loading all 1000 at once, only load 10 at a time)
+- Add pagination
