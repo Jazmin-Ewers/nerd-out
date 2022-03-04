@@ -67,11 +67,25 @@ async function newAttendeeForm(req, res) {
 function randomIntFromInterval(min, max) {  
     return Math.floor(Math.random() * (max - min + 1) + min)
   }
+// Convert the phone field format from xxx-xxxxxxx to (xxx) xxx-xxxx
+function convertPhoneFormat(phoneNumber) {
+let newPhoneFormat = "(" + phoneNumber.slice(0, 3) + ") " + phoneNumber.slice(4,7) + "-" + phoneNumber.slice(7, phoneNumber.length);
+return newPhoneFormat;
+}
+
+// Given the month field "02" and the year "2022" field return one string "02/22"
+function convertDateFormat(month, year) {
+    month = (month.length === 1) ? "0" + month : month;
+    year = year.slice(2, year.length);
+    let newDateFormat = month + "/" + year;
+    return newDateFormat;
+}
 
 function createAttendee(req, res) {
+    req.body.phone = convertPhoneFormat(req.body.phone);
+    req.body.date = convertDateFormat(req.body.month, req.body.year);
     req.body.id = parseInt(req.body.id);
     req.body.paid = (!req.body.paid) ? false : true;
-    console.log(typeof req.body.paid)
     req.body.userID = randomIntFromInterval(100000000000000000, 900000000000000000);
     req.body.companyFunded = parseInt(req.body.companyFunded);
     req.body.team = parseInt(req.body.team);
