@@ -28,13 +28,10 @@ The JSON file contains 1,000 attendees in this format
 }
 ```
 
-# API Features:
+# Check out the Project on Heroku:
+https://nerd-out-3-day-hackathon-2022.herokuapp.com/api 
 
-## Get
-- Shows all 1,000 attendees 
-- Shows all attendees based on their team number
-- Shows all attendees based on their companies
-- Show all attendees based on their job title
+# API Features:
 
 | Read      | url |
 | ----------- | ----------- |
@@ -46,6 +43,8 @@ The JSON file contains 1,000 attendees in this format
 
 ## Update
 - Find attendee id #**793** and change their company from `Google` to `NASA`
+	
+## Delete	
 - Find attendee id #**98** Mojo Jojo and delete them from the **API**
 
 ## Create
@@ -53,7 +52,7 @@ The JSON file contains 1,000 attendees in this format
 
 ###  Bonus:
 
- - Deploy your API
+ - 
  - Add a README that goes through what your API does
  - Convert the phone field format from `xxx-xxxxxxx` to `(xxx) xxx-xxxx`.
  - Take the date format from month/year and separate it to have it's own fields (month and year)
